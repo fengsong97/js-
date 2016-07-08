@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>中文转化成拼音</title>
+</head>
+
+<body>
+    <input type="text" value="吃了没" id='input' onkeyup="showPinyin()">
+    <hr>
+    <br>
+    <br>
+    <div id='show'></div>
+    <script type="text/javascript" src="Pinyin.js"></script>
+    <script type="text/javascript">
+    // setTimeout(code,millisec)
+    function showPinyin() {
+        var value = CC2PY(document.getElementById("input").value)
+        document.getElementById("show").textContent = value;
+        console.log(value)
+    }
+    showPinyin()
+        // document.getElementById("input").addEventListener('onChange', showPinyin());
+    </script>>
+</body>
+
+</html>
